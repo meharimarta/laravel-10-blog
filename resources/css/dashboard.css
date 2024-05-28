@@ -1,0 +1,134 @@
+.posts { 
+    width: auto;
+    margin-left: 18.5%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -6px;
+/*    flex-shrink: 0;*/
+    justify-content: space-between;
+}
+.posts a {
+    flex: 1;
+    margin: 5px;
+    text-decoration: none;
+    display: block;
+    min-width: 250px;
+}
+.icon .fa-drafting-compass {
+    color: rgba(255,0,0,.5);
+}
+.icon .fa-tag {
+    color: rgba(0,0,255,.5);
+}
+.icon .fa-blog {
+    color: #009688;
+}
+.icon .fa-user-circle {
+    color: #E91E63;
+}
+a div {
+    background-color: #eee;
+}
+.post {
+	color:#000;
+	border: none;
+	height: 150px;
+	padding: 15px;
+	border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition-duration: .4s;
+}
+.post:hover {
+        box-shadow: 2px 2px 10px #000;
+}
+.post h3 {
+    text-align: center;
+    font-size: 1.5em;
+}
+.fa-arrow-alt-circle-right {
+ float: right;
+}
+.icon {
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+}
+.chart-wrapper,.member-wrapper {
+    flex-wrap: nowrap;
+    background-color: #eee;
+    min-width: 99.5%;
+    height: 300px;
+    margin-top: 5px;
+}
+.chart-wrapper {
+    height: fit-content;
+}
+.member-wrapper {
+    height: auto;
+}
+.chart-wrapper>p,
+.member-wrapper>p
+{
+    background-color: dodgerblue;
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+    padding: 5px;
+/*    font-size: 1.3em;*/
+}
+.member-wrapper p>.fa {
+    margin: 5px;
+    padding: 5px;
+    background-color: crimson;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.member-wrapper>div {
+    display: flex;
+}
+.general-info {
+    display: flex;
+    justify-content: space-between;
+}
+.trafic {
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    box-shadow: 0 0 5px #000;
+    width: 150px;
+    height: fit-content;
+    margin: 5px;
+}
+.trafic p {
+    color: #000;
+/*    text-align: center;*/
+    font-size: 1.3em;
+    margin-left: 3em;
+}
+.trafic .fa {
+    margin: 5px;
+    padding: 5px;
+    background-color: crimson;
+    color: #fff;
+    float: left;
+    display: block;
+    font-size: 3em;
+    box-shadow: 0 0 5px #000;
+}
+@media(max-width: 550px) {
+    .member-wrapper>div {
+        flex-direction: column;
+    }
+    .new-members , .message {
+        width: auto;
+    }  
+}
+@media(max-width: 850px) {
+    .posts {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+/*        margin-left: 10px;*/
+    }
+}

@@ -1,0 +1,135 @@
+.newblog h2 {
+	text-align:center;
+	box-sizing:border-box;
+}
+input[type="text"] {
+	font-size:140%;
+	margin:0 auto;
+	}
+textarea,
+select,
+input[type="text"],
+input[type="submit"],
+input[type="file"] {
+	box-sizing:border-box;
+	margin-left: 21%;
+	padding:3px;
+	outline:none;
+	border:1px solid #e3e3e3;
+}
+select {
+	background:none;
+	width:50%;
+}
+#publish,#draft {
+	background:none;
+	padding:10px;
+	font-size:120%;
+	width:100px;
+	margin-left:21%;
+}
+#publish {
+	background-color: green;
+	color:#fff;
+}
+#draft {
+	background-color: red;
+	margin-left: auto;
+}
+
+#warn {
+	position: fixed;
+	top:40%;
+	width:100%;
+	color:red;
+	text-align:center;
+	margin:5px;
+	background-color:#ccc;
+	border-radius:3px;
+	z-index:80;
+}
+#content{
+	width:70%;
+}
+button {
+	background:none;
+	color:#fff;
+	border:none;
+	margin:-1px;
+	padding:5px;
+	font-size:120%;
+	/*background-image:linear-gradient(to bottom,green,yellow);*/
+	border-radius:2px;
+}
+.btns {
+	background-image:linear-gradient(to bottom,#19193c,#c6060e);
+	padding:8px;
+	width:99.4%;
+}
+.editor {
+	position:relative;
+	width:75%;
+	margin-left:21%;
+}
+#editor {
+	position:relative;
+	width:100%;
+	height:300px;
+	padding:5px;
+	font-size:120%;
+	overflow:auto;
+	border:1px solid Green;
+}
+#editor img {
+	width:200px;
+	height:300px;
+}
+#cover-img,#post-img {
+	margin-left:21%;
+}
+#cover-img img {
+    width:95%;
+    height: 400px;
+}
+#post-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 3px;
+    margin: 3px;
+    cursor: pointer;
+    
+}
+@media(max-width:700px){
+	.newblog 
+	.newblog,
+	.editor,
+	textarea,
+	select,
+    input[type="text"],
+    input[type="submit"],
+    input[type="file"],
+    #post-img,
+    #cover-img,
+    #draft,
+    #publish{
+	 margin-left: 5px;
+	}
+	.editor{
+		width:96%;
+	}
+}
+#deleting,#done{
+    position: fixed;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px black;
+    top: 45%;
+    left: 45%;
+    height: 70px;
+    width: 200px;
+    font-size: 130%;
+    color: black;
+    padding: 5px;
+    background-color: #48de92;
+}

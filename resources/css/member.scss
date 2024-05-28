@@ -1,0 +1,111 @@
+$font-family: 'Cantarell-Oblique';
+$maginta : #e91e63;
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family;
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,.5);
+    .member,.member2{
+        flex: 1;
+        position: relative;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        top: inherit;
+        left: 0;
+        height: 100%;
+        color: #fff;
+        z-index: -1;
+        .note  {
+            font-size: 2em;
+            position: relative;
+            top: 0;
+            margin: 0;
+            padding: 30px;
+            left: 0;
+            height: 100%;
+//            background-color: rgba(0,0,0,.5);
+            text-align: center;
+        }
+    }
+    .member{
+        background-image: url(../assets/bg.jpg);
+    }
+    .member2  {
+        top: 0;
+        left: 0;
+        background-image: url(../assets/bg2.jpg);
+    }
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    div {
+        .ic {
+            display: inline-block;
+        }
+        i.fa{
+            text-align:center;
+            display: block;
+            color: $maginta;
+            }
+        a {
+            text-decoration: none;
+            background-color: $maginta;
+            border-radius: 5px;
+            font-size: 20px;
+            box-shadow:  0 0 5px #000;
+            color: #fff;
+            padding: 5px;
+            width: 150px;
+            display: block;
+            text-align: center;
+            align-self: center;
+            transition-duration: .5s;
+        }
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        text-align: center;
+        background-color: #fff;
+        margin: 10px;
+        padding: 10px;
+        font-size: 1.3em;
+        border-radius: 5px;
+        color: #0d89ff;
+        width: 200px;
+        margin: 10px;
+        height: 250px;
+        box-shadow:0 0 11px $maginta;
+        transition-duration: .5s;
+    }
+    a:hover {
+//        margin-bottom: 30px;
+        animation: up ease .5s infinite;
+    }
+}
+@media(max-width: 600px) {
+    .icons {
+        flex-direction: column;
+        height: auto;
+    }
+    .icons div {
+        width:  260px;
+    }
+    .member {
+        height: auto;
+    }
+}
+@keyframes up {
+   from{margin-bottom: 0}
+    to {margin-bottom: 20px}
+//    100%{margin-bottom: 0}
+}

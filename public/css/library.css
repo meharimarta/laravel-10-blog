@@ -1,0 +1,44 @@
+.link-wrapper {
+    position: relative;
+    height:315px;;
+    width: inherit;
+}
+a.link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 97%;
+    display: block;
+    background-color: #eee;
+    text-decoration: none;
+}
+.book {
+    position: absolute;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.book>img {
+    position: relative;
+    height: 62%;
+    width: 100%;
+}
+.btn {
+    display: flex;
+    justify-content: space-around;
+}
+.btn button {
+    background: none;
+    color: #fff;
+    padding: 5px;
+    background-color: #e91e63;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin: 5px;
+}
