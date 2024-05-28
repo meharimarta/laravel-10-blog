@@ -1,0 +1,50 @@
+version: '3'
+services:
+  sql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    ports:
+      - 3306:3306
+    volumes:
+      - /workspaces/larablog/mysql:/var/lib/mysql:rw
+
+  phpmyqdmin:
+    image: phpmyadmin
+    restart: always
+    depends_on: 
+        - sql
+    ports:
+      - 3301:8083
+    environment:
+    - PMA_ARBITRARY=1
+    
+  phpapache:
+    image: webdevops/php-apache:7.4
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - sql
+    working_dir: /app
+    volumes:
+      - /workspaces/larablog:/app/larablog:rw
+    environment:
+      - WEB_DOCUMENT_ROOT=/app/larablog/public
+
+  laraten:
+    image: webdevops/php-apache:8.2
+    restart: always
+    ports:
+      - 8080:80
+    depends_on:
+      - sql
+    working_dir: /app
+    volumes:
+      - /workspaces/larablog/laraten:/app/larablog/laraten:rw
+    environment:
+      - WEB_DOCUMENT_ROOT=/app/larablog/laraten/public
+
+
+    
